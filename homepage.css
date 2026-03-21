@@ -2,3 +2,52 @@ body {
     margin: 0;
     font-family: Sora, "sans-serif";
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: black;
+}
+
+.nav-center{
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    padding: 8px;
+    margin-right: 10px;
+
+}
+
+.nav-center input {
+    width: 300px;
+    padding: 8px;
+}
+
+.nav-center button {
+    padding: 8px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.profile{
+    width: 35px;
+    border-radius: 50%;
+}
