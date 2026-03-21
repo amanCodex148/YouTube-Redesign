@@ -1,9 +1,42 @@
-body {
+/* ================= RESET ================= */
+
+*{
+    box-sizing: border-box;
     margin: 0;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+/* ================= Hide scrollbars ================= */
+
+/* Chrome, Edge, Safari */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox */
+html, body {
+    scrollbar-width: none;
+}
+
+/* IE & old Edge */
+html, body {
+    -ms-overflow-style: none;
+}
+
+/* ================= HTML & BODY ================= */
+
+html, body {
+    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-y: auto;
     font-family: Sora, "sans-serif";
 }
 
-.navbar {
+/* ================= NAVBAR ================= */
+
+.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,43 +44,196 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.nav-left{
-    display: flex;
-    align-items: center;
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-.logo-img {
-    width: 40px;
+/* ================= LEFT SIDE NAVBAR SECTION ================= */
+
+.navLeft{
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navLeft {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+}
+
+/* ================= LEFT SIDE LOGO & TEXT ================= */
+
+.navLeft img {
+    width: 200px;  /* change according to your logo size */
     margin-right: 10px;
+
+    background: none;
+    border: none;
+
+    transition: 0.3s;
+
 }
 
-.logo-text {
+.navLeft h2 {
     color: black;
+    font-size: 24px;
 }
 
-.nav-center{
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navLeft img {
+        width: 70px;        /* change according to your logo size */
+    }
+
+    .navLeft h2 {
+        display: none; /* Hide logo text on mobile temporarily */
+        font-size: 18px;
+    }
+}
+
+/* ================= CENTER NAVBAR SECTION ================= */
+
+.navCenter{
     display: flex;
+    justify-content: center;        
     align-items: center;
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navCenter {
+        width: 100%;
+    }
+}
+
+/* ================= CENTER CATEGORY ================= */
 
 .category {
     padding: 8px;
     margin-right: 10px;
-
 }
 
-.nav-center input {
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .category {
+        display: none;
+    }
+}
+
+/* ================= CENTER SEARCH-BAR ================= */
+
+#searchBar {
     width: 300px;
     padding: 8px;
 }
 
-.nav-center button {
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    #searchBar {
+        display: none; /* Hide search bar on mobile */
+    }
+}
+
+/* ================= CENTER SEARCH-BUTTON ================= */
+
+#searchBtn{
+    display: none; /* Hide search button on desktop */
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    #searchBtn {
+        display: block; /* Show search button on mobile */
+
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+}
+
+/* ================= CENTER MIC-BUTTON ================= */
+
+#micBtn {
+        background: none;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+
+        transition: 0.3s;
+
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    #micBtn {
+        font-size: 20px;
+    }
+}
+
+/* ================= RIGHT SIDE NAVBAR SECTION ================= */
+
+.navRight {
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navRight {
+        position: fixed;
+        top: 7px;
+        right: 15px;
+    }
+}
+
+/* ================= RIGHT SIDE PROFILE-IMAGE ================= */
+
+.navRight img {
+    width: 80px;
+    /* border-radius: 50%; */       /* Uncomment this line if you want circular profile images */
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navRight img {
+        width: 60px;
+    }
+}
+
+/* ================= RIGHT SIDE PROFILE-OPTIONS ================= */
+
+.navRight select {
     padding: 8px;
-    margin-left: 5px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
-.profile{
-    width: 35px;
-    border-radius: 50%;
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .navRight select {
+        display: none; /* Hide profile options, on mobile this option will be at the bottom nav-bar */
+    }
 }
