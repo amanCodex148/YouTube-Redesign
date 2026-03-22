@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/homepage.css">
+    <link rel="stylesheet" href="homepage.css">
 
-     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 
 </head>
 
@@ -31,33 +31,36 @@
 
         <div class="navLeft">
 
-            <img src="/assets/images/YouTube-Logo.png" alt="logo-img" id="logo-img"> <!-- change the logo if you want, i just added it for checking responsiveness -->
+            <img src="/assets/images/YouTube-Logo1.png" alt="logo-img" id="logo-img">
 
-        <!-- <h2 id="logo-text">YouTube</h2> --> <!-- disabled it temporarily -->
+            <h2 id="logo-text">YouTube</h2>
 
         </div>
 
         <!-- at the center, we have the search bar and the category dropdown -->
 
-        <div class="navCenter">
+       <div class="navCenter">
 
             <select class="category">
 
-                <option value="all"> All </option>
-                <option value="movie"> Movies </option>
-                <option value="music"> Music </option>
-                <option value="gaming"> Gaming </option>
+                <option value="all" class="category-option"> All </option>
+                <option value="movie" class="category-option"> Movies </option>
+                <option value="music" class="category-option"> Music </option>
+                <option value="gaming" class="category-option"> Gaming </option>
 
             </select>
-        
 
-            <input type="text" name="searchBar" id="searchBar" placeholder="Search...">
+            <div class="search-container" id="searchContainer">
 
-            <!-- Replace emoji with actual logo later -->
+                <input type="text" id="searchBar" placeholder="Search...">
 
-            <button id="searchBtn">🔍</button>  <!-- Search icon button -->
-            
-            <button id="micBtn">🎙️</button> <!-- add mic logo later -->
+                <button id="micBtn">🎙️</button>
+
+                <button id="closeSearch">✖</button>
+
+            </div>
+
+                
 
         </div>
 
@@ -65,24 +68,28 @@
 
         <div class="navRight">
 
-            <img src="profilephotohere" class="profile" id="profile-img">
+            <!-- Mobile search icon -->
+                 
+            <button id="searchBtn">🔍</button>
 
-            <select class="profile-options">
+            <img src="/assets/images/Codex PFP.png" class="profile" id="profile-img">
 
-                <option value="user-profile"> My Profile </option>
-                <option value="settings"> Settings </option>
+            <div class="profile-menu" id="profile-menu">
 
-                <!-- added from here, before doing anything, once run the "git pull origin main" -->
+                <div class="menu-item">👤 My Profile</div>
+                <div class="menu-item">⚙️ Settings</div>
+                <div class="menu-item">🚪 Sign Out</div>
+                <div class="menu-item" id="themeToggle">🌙 Dark Mode</div>
 
-                <option value="sign-out"> Sign Out </option>
-                <option value="appearance"> Appearance </option>  <!-- for dark mode and light mode toggle -->
+            </div>
 
-            </select>
+        </div>
 
     </div>
 
-    <script src="/script.js"></script>
-    
+    <!-- JS (use defer to ensure DOM is loaded) -->
+    <script src="script.js" defer></script>
+
 </body>
 
 </html>

@@ -1,3 +1,12 @@
+/* ================= THEME VARIABLES ================= */
+
+:root {
+    --bg-color: white;
+    --text-white-color: white;
+    --text-black-color: black;
+    --card-color: #ffffff;
+}
+
 /* ================= RESET ================= */
 
 *{
@@ -32,6 +41,11 @@ html, body {
     overflow-x: hidden; /* prevent horizontal scroll */
     overflow-y: auto;
     font-family: Sora, "sans-serif";
+    color: var(--text-black-color);
+}
+
+body.dark {
+    color: var(--text-white-color);
 }
 
 /* ================= NAVBAR ================= */
@@ -40,65 +54,76 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+    height: 60px;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navBar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;         
+        align-items: center;         
+        justify-content: space-between;
+        height: 50px;
     }
 }
 
 /* ================= LEFT SIDE NAVBAR SECTION ================= */
 
 .navLeft{
-    display: flex;
-    justify-content: center;        
+    display: flex;       
     align-items: center;
-
+    gap: 5px;
+    transform: translateY(1px);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navLeft {
-        margin-bottom: 10px;
         font-size: 10px;
+        gap: 0;
     }
 }
 
 /* ================= LEFT SIDE LOGO & TEXT ================= */
 
 .navLeft img {
-    width: 200px;  /* change according to your logo size */
-    margin-right: 10px;
+    width: 30px;
+    margin-right: 5px;
 
     background: none;
     border: none;
 
     transition: 0.3s;
 
+    cursor: pointer;
 }
 
 .navLeft h2 {
-    color: black;
-    font-size: 24px;
+
+    color: inherit;
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navLeft img {
-        width: 70px;        /* change according to your logo size */
+        width: 18px;
     }
 
     .navLeft h2 {
-        display: none; /* Hide logo text on mobile temporarily */
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -123,6 +148,7 @@ html, body {
 .category {
     padding: 8px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -131,6 +157,12 @@ html, body {
     .category {
         display: none;
     }
+}
+
+/* ================= CENTER CATEGORY OPTION ================= */
+
+.category-option {
+    cursor: pointer;
 }
 
 /* ================= CENTER SEARCH-BAR ================= */
@@ -144,41 +176,29 @@ html, body {
 
 @media (max-width: 767px) {
     #searchBar {
-        display: none; /* Hide search bar on mobile */
+        display: none;
     }
 }
 
-/* ================= CENTER SEARCH-BUTTON ================= */
+#searchBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 
-#searchBtn{
-    display: none; /* Hide search button on desktop */
-}
-
-/* ================= MOBILE RESPONSIVE ================= */
-
-@media (max-width: 767px) {
-    #searchBtn {
-        display: block; /* Show search button on mobile */
-
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-
-        transition: 0.3s;
-    }
+    transition: 0.3s;
+    display: none;
 }
 
 /* ================= CENTER MIC-BUTTON ================= */
 
 #micBtn {
-        background: none;
-        border: none;
-        font-size: 32px;
-        cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
 
-        transition: 0.3s;
-
+    transition: 0.3s;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -189,51 +209,193 @@ html, body {
     }
 }
 
+/* ================= SEARCH CONTAINER ================= */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hide close button by default */
+#closeSearch {
+    display: none;
+}
+
+.search-container.active {
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+
+    #searchBar {
+        display: none;
+    }
+
+    #searchBtn {
+        display: block;
+    }
+
+    #micBtn {
+        display: none;
+    }
+
+    /* Expand mode */
+    .search-container.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px;
+        z-index: 9999;
+    }
+
+    .search-container.active #searchBar {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-container.active #micBtn {
+        display: block;
+    }
+
+    .search-container.active #closeSearch {
+        display: block;
+    }
+
+    /* Hide search icon when expanded */
+    .search-container.active ~ #searchBtn {
+        display: none;
+    }
+}
+
 /* ================= RIGHT SIDE NAVBAR SECTION ================= */
 
 .navRight {
     display: flex;
     justify-content: center;        
     align-items: center;
+    position: relative;
+    color: black;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navRight {
-        position: fixed;
-        top: 7px;
+        position: absolute;
+        top: 10px;
         right: 15px;
     }
 }
 
 /* ================= RIGHT SIDE PROFILE-IMAGE ================= */
 
-.navRight img {
-    width: 80px;
-    /* border-radius: 50%; */       /* Uncomment this line if you want circular profile images */
+.navRight .profile {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 2px solid var(--text-black-color);
+}
+
+body.dark .navRight .profile {
+    border: 2px solid var(--text-white-color);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
-    .navRight img {
-        width: 60px;
+    .navRight .profile {
+        width: 30px;
+        border: 1px solid var(--text-black-color);
+    }
+
+    body.dark .navRight .profile {
+        border: 1px solid var(--text-white-color);
     }
 }
 
 /* ================= RIGHT SIDE PROFILE-OPTIONS ================= */
 
-.navRight select {
-    padding: 8px;
-    margin-left: 10px;
+.navRight .profile-menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 180px;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    padding: 8px 0;
+    z-index: 9999;
+
     cursor: pointer;
+
+    /* animation base */
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+
+    transition: all 0.25s ease;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navRight select {
-        display: none; /* Hide profile options, on mobile this option will be at the bottom nav-bar */
+        display: none;
     }
+}
+
+/* ================= SHOW MENU ================= */
+
+.profile-menu.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* ================= MENU ITEMS ================= */
+
+.menu-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .profile-menu {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+body.dark .menu-item:hover {
+    background: rgba(255,255,255,0.1);
 }
