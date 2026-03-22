@@ -150,6 +150,8 @@ body.dark {
     margin-right: 10px;
     cursor: pointer;
     border-radius: 20px;
+    border: 1px solid black;
+    width: 75px;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -169,9 +171,10 @@ body.dark {
 /* ================= CENTER SEARCH-BAR ================= */
 
 #searchBar {
-    width: 300px;
+    width: 500px;
     padding: 8px;
     border-radius: 20px;
+    border: 1px solid black;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -404,8 +407,14 @@ body.dark .menu-item:hover {
 body.dark #searchBar {
     background: rgba(30, 30, 30, 0.8);
     color: gray;
+    border: 1px solid gray;
 }
 body.dark .category{
     background: rgba(30, 30, 30, 0.8);
     color: gray;
+    border: 1px solid gray;
+}
+body.dark .search-container #micBtn{
+    color: gray;
+
 }
