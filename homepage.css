@@ -50,7 +50,11 @@ body.dark {
 
 /* ================= NAVBAR ================= */
 
-.navBar {
+.top-navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,12 +62,16 @@ body.dark {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     height: 60px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 5px 10px rgba(10, 10, 10, 0.25);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
-    .navBar {
+    .top-navBar {
         flex-direction: row;         
         align-items: center;         
         justify-content: space-between;
@@ -398,4 +406,106 @@ body.dark .profile-menu {
 
 body.dark .menu-item:hover {
     background: rgba(255,255,255,0.1);
+}
+
+/* ================= FOOTER DISABLED IN DESKTOP ================= */
+
+.bottom-navBar {
+    display: none;
+}
+
+/* ================= For Only Phones ================= */
+    
+@media (max-width: 767px) {
+
+    /* ================= FOOTER ================= */
+
+    .bottom-navBar{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 3;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        border-top: 1px solid #ddd;
+
+        padding: 10px 0;
+        font-size: 14px;
+
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(25px);
+        box-shadow: -15px 5px 10px rgba(10, 10, 10, 0.25);
+    }
+
+    .bottom-navBar div{
+        flex: 1;
+        text-align: center;
+    }
+
+    /* ================= unordered list (ul) ================= */
+
+    .navs {
+        display: flex;
+        gap: 38px;
+        list-style: none;
+        font-family: "ubuntu", serif;
+    }
+
+    /* ================= navigation item ================= */
+
+    .nav {
+        display: flex;
+        text-decoration: none;
+        justify-content: center; /* center */
+        align-items: center;
+        text-align: center;
+        color: var(--text-black-color);
+    }
+
+    /* ================= video/post creation ================= */
+
+    #creationBtn {
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--text-black-color);
+        background: none;
+        border: none;
+    }
+
+    /* ================= navigation link ================= */
+
+    .nav a {
+        color: var(--text-black-color);
+        text-decoration: none;
+
+        position: relative;
+    }
+
+    .nav a::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+
+        width: 0%;
+        height: 2px;
+
+        background: white;
+        transition: 0.3s;
+        text-shadow: 0 0 0 #ffffff;
+    }
+
+    .nav a:hover::after {
+        width: 100%;
+        text-shadow: 0 2px 6px #ffffff;
+    }
+
+    .nav a:hover {
+        text-shadow: 0 2px 6px #ffffff;
+    }
 }
