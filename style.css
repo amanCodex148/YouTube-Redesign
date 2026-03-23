@@ -2,8 +2,8 @@
 
 :root {
     --bg-color: white;
-    --text-white-color: white;
-    --text-black-color: black;
+    --white-color: white;
+    --black-color: black;
     --card-color: #ffffff;
 }
 
@@ -41,16 +41,16 @@ html, body {
     overflow-x: hidden; /* prevent horizontal scroll */
     overflow-y: auto;
     font-family: Sora, "sans-serif";
-    color: var(--text-black-color);
+    color: var(--black-color);
 }
 
 body.dark {
-    color: var(--text-white-color);
+    color: var(--white-color);
 }
 
-/* ================= NAVBAR ================= */
+/* ================= TOP NAVBAR ================= */
 
-.navBar {
+.top-navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,12 +58,13 @@ body.dark {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     height: 60px;
+    
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
-    .navBar {
+    .top-navBar {
         flex-direction: row;         
         align-items: center;         
         justify-content: space-between;
@@ -262,9 +263,13 @@ body.dark {
         top: 0;
         left: 0;
         width: 100%;
-        background: white;
+        background: var(--white-color);
         padding: 10px;
         z-index: 9999;
+    }
+
+    body.dark .search-container.active {
+        background: var(--black-color);
     }
 
     .search-container.active #searchBar {
@@ -314,11 +319,11 @@ body.dark {
     cursor: pointer;
     border-radius: 50%;
     transition: 0.3s;
-    border: 2px solid var(--text-black-color);
+    border: 2px solid var(--black-color);
 }
 
 body.dark .navRight .profile {
-    border: 2px solid var(--text-white-color);
+    border: 2px solid var(--white-color);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -326,11 +331,11 @@ body.dark .navRight .profile {
 @media (max-width: 767px) {
     .navRight .profile {
         width: 30px;
-        border: 1px solid var(--text-black-color);
+        border: 1px solid var(--black-color);
     }
 
     body.dark .navRight .profile {
-        border: 1px solid var(--text-white-color);
+        border: 1px solid var(--white-color);
     }
 }
 
@@ -429,17 +434,18 @@ body.dark .search-container #micBtn{
     top: 60px;
     left: 0;
     z-index: 9;
-    width: 140px;
+    width: 160px;
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     gap: 20px;
+    border-right: 1px solid #ddd;
 
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
-    box-shadow: 5px 0 10px rgba(10, 10, 10, 0.25);
+    box-shadow: 5px 0 10px rgba(10, 10, 10, 0.25); */
 }
 
 /* ================= VERTICAL LEFT NAVBAR DISABLED IN PHONES ================= */
@@ -538,7 +544,7 @@ body.dark .search-container #micBtn{
         justify-content: center; /* center */
         align-items: center;
         text-align: center;
-        color: var(--text-black-color);
+        color: var(--black-color);
     }
 
     /* ================= video/post creation ================= */
@@ -546,7 +552,7 @@ body.dark .search-container #micBtn{
     #creationBtn {
         font-size: 48px;
         font-weight: bold;
-        color: var(--text-black-color);
+        color: var(--black-color);
         background: none;
         border: none;
     }
@@ -554,7 +560,7 @@ body.dark .search-container #micBtn{
     /* ================= navigation link ================= */
 
     .nav a {
-        color: var(--text-black-color);
+        color: var(--black-color);
         text-decoration: none;
 
         position: relative;
