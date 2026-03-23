@@ -53,3 +53,22 @@ searchBtn.addEventListener("click", () => {
 closeSearch.addEventListener("click", () => {
     searchBox.classList.remove("active");
 });
+
+// mic permissions for both desktop and mobile
+
+const micBtn = document.getElementById("micBtn");
+
+micBtn.addEventListener("click", async () => {
+
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true});
+        console.log("Microphone access granted"); // for checking in console, whether mic is workiing or not .
+        stream.getTracks().forEach(track => track.stop()); // Stop the stream immediately after access
+    }
+    catch (error) {
+        console.error("Microphone access denied:", error);
+
+        alert("Please allow microphone access!");
+
+    }
+});
