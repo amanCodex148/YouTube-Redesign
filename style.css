@@ -452,11 +452,33 @@ body.dark .search-container #micBtn{
 
 /* ================= VERTICAL LEFT NAVBAR LINKS ================= */
 
-.vertical-nav-links {
+.vertical-left-navBar ul {
+    list-style: none;              /* ❌ remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.vertical-left-navBar li {
+    width: 100%;
+}
+
+.vertical-left-navBar a {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;}
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    color: inherit;
+
+    font-size: 14px;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
 
 /* ================= FOOTER DISABLED IN DESKTOP ================= */
 
