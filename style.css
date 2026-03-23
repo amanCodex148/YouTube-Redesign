@@ -408,11 +408,51 @@ body.dark .menu-item:hover {
     background: rgba(255,255,255,0.1);
 }
 
+/* ================= VERTICAL LEFT NAVBAR ================= */
+
+.vertical-left-navBar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 9;
+    width: 140px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: 5px 0 10px rgba(10, 10, 10, 0.25);
+}
+
+
+
+/* ================= VERTICAL LEFT NAVBAR DISABLED IN PHONES ================= */
+
+@media (max-width: 767px) {
+    .vertical-left-navBar {
+        display: none;
+    }
+}
+
+/* ================= VERTICAL LEFT NAVBAR LINKS ================= */
+
+.vertical-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;}
+
 /* ================= FOOTER DISABLED IN DESKTOP ================= */
 
 .bottom-navBar {
     display: none;
 }
+
+/*===================  ================= */
 
 /* ================= For Only Phones ================= */
     
