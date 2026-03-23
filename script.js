@@ -36,6 +36,8 @@ console.log(
     document.getElementById("themeToggle")
 );
 
+// Search functionality for mobile
+
 const searchBox = document.getElementById("searchContainer");
 const searchBtn = document.getElementById("searchBtn");
 const closeSearch = document.getElementById("closeSearch");
