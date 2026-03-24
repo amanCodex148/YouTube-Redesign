@@ -73,7 +73,7 @@ body.dark {
     }
 }
 
-/* ================= LEFT SIDE NAVBAR SECTION ================= */
+/* ================= TOP LEFT SIDE NAVBAR SECTION ================= */
 
 .navLeft{
     display: flex;       
@@ -109,7 +109,15 @@ body.dark {
     opacity: 1;
 }
 
-/* ================= LEFT SIDE LOGO & TEXT ================= */
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    #menuBtn {
+        display: none;
+    }
+}
+
+/* ================= TOP LEFT SIDE LOGO & TEXT ================= */
 
 .navLeft img {
     width: 30px;
@@ -141,6 +149,7 @@ body.dark {
 @media (max-width: 767px) {
     .navLeft img {
         width: 18px;
+        margin-left: 1px;
     }
 
     .navLeft h2 {
@@ -148,7 +157,7 @@ body.dark {
     }
 }
 
-/* ================= CENTER NAVBAR SECTION ================= */
+/* ================= TOP CENTER NAVBAR SECTION ================= */
 
 .navCenter{
     display: flex;
@@ -164,7 +173,7 @@ body.dark {
     }
 }
 
-/* ================= CENTER CATEGORY ================= */
+/* ================= TOP CENTER CATEGORY ================= */
 
 .category {
     padding: 8px;
@@ -183,13 +192,14 @@ body.dark {
     }
 }
 
-/* ================= CENTER SEARCH-BAR ================= */
+/* ================= TOP CENTER SEARCH-BAR ================= */
 
 #searchBar {
     width: 500px;
     padding: 8px;
     border-radius: 20px;
     border: 1px solid var(--nav-border-color);
+    
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -210,12 +220,16 @@ body.dark {
     display: none;
 }
 
-/* ================= CENTER MIC-BUTTON ================= */
+body.dark #searchBtn {
+    color: var(--white-color);
+}
+
+/* ================= TOP CENTER MIC-BUTTON ================= */
 
 #micBtn {
     background: none;
     border: none;
-    font-size: 32px;
+    font-size: 28px;
     cursor: pointer;
 
     transition: 0.3s;
@@ -229,18 +243,25 @@ body.dark {
     }
 }
 
-/* ================= SEARCH CONTAINER ================= */
+/* ================= TOP CENTER SEARCH CONTAINER ================= */
 
 .search-container {
     display: flex;
     align-items: center;
     gap: 5px;
+
 }
 
 /* Hide close button by default */
 #closeSearch {
     display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: inherit;
 }
+
+
 
 .search-container.active {
     animation: slideDown 0.2s ease;
@@ -265,6 +286,7 @@ body.dark {
 
     #searchBtn {
         display: block;
+        color: inherit;
     }
 
     #micBtn {
@@ -306,7 +328,7 @@ body.dark {
     }
 }
 
-/* ================= RIGHT SIDE NAVBAR SECTION ================= */
+/* ================= TOP RIGHT SIDE NAVBAR SECTION ================= */
 
 .navRight {
     display: flex;
@@ -326,7 +348,7 @@ body.dark {
     }
 }
 
-/* ================= RIGHT SIDE PROFILE-IMAGE ================= */
+/* ================= TOP RIGHT SIDE PROFILE-IMAGE ================= */
 
 .navRight .profile {
     width: 40px;
@@ -354,7 +376,7 @@ body.dark {
     } */
 }
 
-/* ================= RIGHT SIDE PROFILE-OPTIONS ================= */
+/* ================= TOP RIGHT SIDE PROFILE-OPTIONS ================= */
 
 .navRight .profile-menu {
     position: fixed;
@@ -558,7 +580,7 @@ body.dark .search-container #micBtn{
 
     .navs {
         display: flex;
-        gap: 38px;
+        gap: 34px;
         list-style: none;
         font-family: "ubuntu", serif;
     }
@@ -577,7 +599,7 @@ body.dark .search-container #micBtn{
     /* ================= video/post creation ================= */
 
     #creationBtn {
-        font-size: 48px;
+        font-size: 34px;
         font-weight: bold;
         color: var(--black-color);
         background: none;
