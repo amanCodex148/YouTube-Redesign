@@ -8,6 +8,38 @@
     --nav-border-color: #ddd;
 }
 
+/* ================= DARK MODE ================= */
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .profile-menu {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+body.dark .menu-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+body.dark #searchBar {
+    background: rgba(30, 30, 30, 0.8);
+    color: gray;
+    border: 1px solid gray;
+}
+
+body.dark .category{
+    background: rgba(30, 30, 30, 0.8);
+    color: gray;
+    border: 1px solid gray;
+}
+
+body.dark .search-container #micBtn{
+    color: rgb(145, 145, 145);
+
+}
+
 /* ================= RESET ================= */
 
 *{
@@ -99,8 +131,7 @@ body.dark {
     background: none;
     cursor: pointer;
 
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1px;
     color: inherit;
 }
 
@@ -121,7 +152,7 @@ body.dark {
 
 .navLeft img {
     width: 30px;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-right: 5px;
 
     background: none;
@@ -335,7 +366,7 @@ body.dark #searchBtn {
     justify-content: center;        
     align-items: center;
     position: relative;
-    color: black;
+    color: inherit;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -432,38 +463,6 @@ body.dark #searchBtn {
     background: rgba(0,0,0,0.05);
 }
 
-/* ================= DARK MODE ================= */
-
-body.dark {
-    background: #121212;
-    color: white;
-}
-
-body.dark .profile-menu {
-    background: rgba(30, 30, 30, 0.8);
-}
-
-body.dark .menu-item:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-body.dark #searchBar {
-    background: rgba(30, 30, 30, 0.8);
-    color: gray;
-    border: 1px solid gray;
-}
-
-body.dark .category{
-    background: rgba(30, 30, 30, 0.8);
-    color: gray;
-    border: 1px solid gray;
-}
-
-body.dark .search-container #micBtn{
-    color: rgb(145, 145, 145);
-
-}
-
 /* ================= VERTICAL LEFT NAVBAR ================= */
 
 .vertical-left-navBar {
@@ -471,7 +470,7 @@ body.dark .search-container #micBtn{
     top: 60px;
     left: 0;
     z-index: 9;
-    width: 160px;
+    width: 130px;
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -511,12 +510,14 @@ body.dark .search-container #micBtn{
     padding: 0;
     margin: 0;
     width: 100%;
+
 }
 
 .vertical-left-navBar li {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 45px;
+    
 }
 
 .vertical-left-navBar a {
