@@ -94,11 +94,12 @@ body.dark {
 /* ================= MENU BUTTON ================= */
 
 #menuBtn {
-    font-size: 22px;
+    font-size: 24px;
     border: none;
     background: none;
     cursor: pointer;
 
+    margin-left: 10px;
     margin-right: 10px;
     color: inherit;
 }
@@ -332,24 +333,25 @@ body.dark {
     cursor: pointer;
     border-radius: 50%;
     transition: 0.3s;
-    border: 2px solid var(--black-color);
+    border: 2px solid var(--nav-border-color);
 }
 
-body.dark .navRight .profile {
-    border: 2px solid var(--white-color);
-}
+/* body.dark .navRight .profile {
+        border: 1px solid var(--white-color);
+        
+} */
 
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 767px) {
     .navRight .profile {
         width: 30px;
-        border: 1px solid var(--black-color);
+        border: 1px solid var(--nav-border-color);
     }
 
-    body.dark .navRight .profile {
+    /* body.dark .navRight .profile {
         border: 1px solid var(--white-color);
-    }
+    } */
 }
 
 /* ================= RIGHT SIDE PROFILE-OPTIONS ================= */

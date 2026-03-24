@@ -72,3 +72,10 @@ micBtn.addEventListener("click", async () => {
 
     }
 });
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".vertical-left-navBar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+});
