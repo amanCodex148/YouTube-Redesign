@@ -498,13 +498,13 @@ body.dark #searchBtn {
     padding: 0;
     margin: 0;
     width: 100%;
+    
 
 }
 
 .vertical-left-navBar li {
     width: 100%;
-    margin-top: 8px;
-    /* margin-bottom: 40px; */
+    margin-bottom: 18px;
     
 }
 
@@ -526,7 +526,7 @@ body.dark #searchBtn {
 
     transition: 0.2s;
 
-    gap: 12px;
+    gap: 4px;
 
 }
 
@@ -555,11 +555,14 @@ body.dark .vertical-left-navBar a:hover {
     width: 90px;
 }
 
+.vertical-left-navBar.collapsed li {
+    margin-bottom: 15px;
+    
+}
 
 .vertical-left-navBar.collapsed a {
     justify-content: center;
     font-size: 11px;
-    gap: 10px;
 }
 
 .vertical-left-navBar.collapsed .vert-nav-icons {
