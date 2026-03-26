@@ -73,7 +73,7 @@ micBtn.addEventListener("click", async () => {
     }
 });
 
-// Sidebar menu functionality for desktop
+// Sidebar menu and top bar category functionality for desktop
 
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.querySelector(".vertical-left-navBar");

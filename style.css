@@ -185,6 +185,8 @@ body.dark {
         opacity 0.2s ease;
     transform: scale(1.05);
 
+    /* box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); */
+
     cursor: pointer;
 }
 
@@ -584,7 +586,7 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
-/* .bottom-category a:active {
+/* .bottom-category a.active {
     font-size: 18px;
     font-weight: 600;
 } */
