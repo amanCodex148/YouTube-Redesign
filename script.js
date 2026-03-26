@@ -80,4 +80,5 @@ const sidebar = document.querySelector(".vertical-left-navBar");
 
 menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
+    document.body.classList.toggle("sidebar-collapsed");
 });

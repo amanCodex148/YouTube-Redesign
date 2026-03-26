@@ -30,71 +30,110 @@
 
 <body onload="window.scrollTo(0,0)">
 
-    <div class="top-navBar">
+    <navigation class="top-navBar-section"> 
 
-        <!-- at the top bar of the page, we have a navbar which is divided into three sections - left, center and right. -->
+        <div class="top-navBar">
+
+        <!-- at the top bar of the page, we have a navbar which is divided into three sections - left, center, right and bottom. -->
 
         <!-- at the left, we have the logo of youtube -->
 
-        <div class="navLeft">
+            <div class="navLeft">
 
-            <button id="menuBtn"><i class="ri-menu-fill"></i></button>
+                <button id="menuBtn"><i class="ri-menu-fill"></i></button>
 
-            <img src="/assets/images/YouTube-Logo1.png" alt="logo-img" id="logo-img">
+                <img src="/assets/images/YouTube-Logo1.png" alt="logo-img" id="logo-img">
 
-            <h2 id="logo-text">YouTube</h2>
-
-        </div>
-
-        <!-- at the center, we have the search bar and the category dropdown -->
-
-       <div class="navCenter">
-
-            <select class="category">
-
-                <option value="all" class="category-option"> All </option>
-                <option value="movie" class="category-option"> Movies </option>
-                <option value="music" class="category-option"> Music </option>
-                <option value="gaming" class="category-option"> Gaming </option>
-
-            </select>
-
-            <div class="search-container" id="searchContainer">
-
-                <input type="text" id="searchBar" placeholder="Search">
-
-                <button id="micBtn"><i class="ri-mic-line"></i></button> <!-- mic permission is given :) -->
-
-                <button id="closeSearch"><i class="ri-close-line"></i></button>
+                <h2 id="logo-text">YouTube</h2>
 
             </div>
 
-                
+            <!-- at the center, we have the search bar and mic -->
+
+        <div class="navCenter">
+
+                <!-- <select class="category">
+
+                    <option value="all" class="category-option"> All </option>
+                    <option value="movie" class="category-option"> Movies </option>
+                    <option value="music" class="category-option"> Music </option>
+                    <option value="gaming" class="category-option"> Gaming </option>
+
+                </select> -->
+
+                <div class="search-container" id="searchContainer">
+
+                    <input type="text" id="searchBar" placeholder="Search">
+
+                    <button id="micBtn"><i class="ri-mic-line"></i></button> <!-- mic permission is given :) -->
+
+                    <button id="closeSearch"><i class="ri-close-line"></i></button>
+
+                </div>
+
+                    
+
+            </div>
+
+            <!-- at the right, we have the profile picture and the dropdown for profile options -->
+
+            <div class="navRight">
+
+                <!-- Mobile search icon -->
+                    
+                <button id="searchBtn"><i class="ri-search-line"></i></button>
+
+                <img src="/assets/images/Codex PFP.png" class="profile" id="profile-img">
+
+                <div class="profile-menu" id="profile-menu">
+
+                    <div class="menu-item">👤 My Profile</div>
+                    <div class="menu-item">⚙️ Settings</div>
+                    <div class="menu-item">🚪 Sign Out</div>
+                    <div class="menu-item" id="themeToggle">🌙 Dark Mode</div>
+
+                </div>
+
+            </div>
+
+            <!-- at the bottom of the top navbar, we have some category links 
+            like - All, Movies, Music, Gaming etc. which are visible only on desktop and tablet type devices. -->
 
         </div>
 
-        <!-- at the right, we have the profile picture and the dropdown for profile options -->
+        <div class="top-navBottom">
 
-        <div class="navRight">
+            <div class="bottom-category-container">
 
-            <!-- Mobile search icon -->
-                 
-            <button id="searchBtn"><i class="ri-search-line"></i></button>
+                <div class="bottom-category"><a href="#all" class="nav-category">All</a></div>
+                <div class="bottom-category"><a href="#gaming" class="nav-category">Gaming</a></div>
+                <div class="bottom-category"><a href="#movies" class="nav-category">Movies</a></div>
+                <div class="bottom-category"><a href="#music" class="nav-category">Music</a></div>
+                <div class="bottom-category"><a href="#education" class="nav-category">Education</a></div>
+                <div class="bottom-category"><a href="#comedy" class="nav-category">Comedy</a></div>
+                <div class="bottom-category"><a href="#news" class="nav-category">News</a></div>
+                <div class="bottom-category"><a href="#sports" class="nav-category">Sports</a></div>
+                <div class="bottom-category"><a href="#esport" class="nav-category">E-Sports</a></div>
+                <div class="bottom-category"><a href="#android-tips" class="nav-category">Android Tips</a></div>
+                <div class="bottom-category"><a href="#ios-tips" class="nav-category">iOS Tips</a></div>
+                <div class="bottom-category"><a href="#tech" class="nav-category">Technology</a></div>
 
-            <img src="/assets/images/Codex PFP.png" class="profile" id="profile-img">
+                <!-- <div class="bottom-category"><a href="#podcasts" class="nav-category">Podcasts</a></div>
+                <div class="bottom-category"><a href="#lifestyle" class="nav-category">Lifestyle</a></div>
+                <div class="bottom-category"><a href="#travel" class="nav-category">Travel</a></div>
+                <div class="bottom-category"><a href="#food" class="nav-category">Food</a></div>
+                <div class="bottom-category"><a href="#fashion" class="nav-category">Fashion</a></div>
+                <div class="bottom-category"><a href="#beauty" class="nav-category">Beauty</a></div>
+                <div class="bottom-category"><a href="#health" class="nav-category">Health</a></div>
+                <div class="bottom-category"><a href="#fitness" class="nav-category">Fitness</a></div> -->
 
-            <div class="profile-menu" id="profile-menu">
-
-                <div class="menu-item">👤 My Profile</div>
-                <div class="menu-item">⚙️ Settings</div>
-                <div class="menu-item">🚪 Sign Out</div>
-                <div class="menu-item" id="themeToggle">🌙 Dark Mode</div>
+                <!-- add more categories as needed -->
 
             </div>
 
         </div>
 
-    </div>
+    </navigation>
 
     <!-- for desktop and tablet type devices, we have a vertical left navBar -->
 
