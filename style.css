@@ -82,6 +82,7 @@ html, body {
 
 body.dark {
     color: var(--white-color);
+    background: var(--black-color);
 }
 
 /* ================= BUTTON INTERACTION ================= */
@@ -120,7 +121,8 @@ body.dark {
         flex-direction: row;         
         align-items: center;         
         justify-content: space-between;
-        height: 52px;
+        height: 60px;
+        background: black;
         border-bottom: 1px solid var(--nav-border-color);
     }
 }
@@ -212,12 +214,13 @@ body.dark {
 
 @media (max-width: 767px) {
     .navLeft img {
-        width: 20px;
+        width: 25px;
         margin-left: 1px;
+        margin-right: 5px;
     }
 
     .navLeft h2 {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -259,11 +262,32 @@ body.dark {
 /* ================= TOP CENTER SEARCH-BAR ================= */
 
 #searchBar {
-    width: 500px;
+    width: 450px;
     padding: 8px;
-    border-radius: 20px;
-    border: 1px solid var(--nav-border-color);
+    border-radius: 15px;
+    border: 1.5px solid rgb(255, 130, 130);
     
+}
+
+body.dark #searchBar {
+    background: rgba(30, 30, 30, 0.8);
+    color: gray;
+    border: 2.2px solid rgb(255, 130, 130);
+}
+
+/* ================= SEARCH FOCUS BORDER ================= */
+
+#searchBar:focus {
+    outline: none;
+    border: 1.5px solid rgb(255, 130, 130); 
+    box-shadow: 0 0 0 2px rgba(255, 130, 130, 0.5);
+}
+
+/* ================= DARK MODE SEARCH FOCUS ================= */
+
+body.dark #searchBar:focus {
+    border: 2.2px solid rgb(255, 130, 130);
+    box-shadow: 0 0 0 2px rgba(255, 130, 130, 0.36);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -288,15 +312,58 @@ body.dark #searchBtn {
     color: var(--white-color);
 }
 
+/* ================= TOP CENTER MIC-BUTTON BACKGROUND ================= */
+
+/* .mic-bg-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+
+    background: rgb(255, 130, 130);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+} */
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* @media (max-width: 767px) {
+    .mic-bg-circle {
+        display: none;
+    }
+} */
+
 /* ================= TOP CENTER MIC-BUTTON ================= */
 
 #micBtn {
-    background: none;
+    background: rgb(255, 130, 130);
     border: none;
-    font-size: 28px;
+    border-radius: 50%;
+    font-size: 25px;
     cursor: pointer;
 
+    width: 42px;
+    height: 42px;
+
+    /* box-shadow:
+        0 8px 25px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130); */
+
     transition: 0.3s;
+}
+
+body.dark .navCenter #micBtn {
+    color: rgb(0, 0, 0);
+}
+
+/* ================= MIC HOVER EFFECT ================= */
+
+#micBtn:hover {
+    opacity: 0.8;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -328,6 +395,7 @@ body.dark #searchBtn {
 
 
 .search-container.active {
+
     animation: slideDown 0.2s ease;
 }
 
@@ -350,11 +418,29 @@ body.dark #searchBtn {
 
     #searchBtn {
         display: block;
-        color: inherit;
+        background: none;
+        border: none;
+
+        margin-right: 15px;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
+    }
+
+    body.dark #searchBtn {
+        color: rgb(173, 173, 173);
     }
 
     #micBtn {
         display: none;
+        background: none;
+        border: none;
     }
 
     /* Expand mode */
@@ -374,16 +460,41 @@ body.dark #searchBtn {
 
     .search-container.active #searchBar {
         display: block;
+        margin-right: 8px;
+        background: none;
+        border: none;
         width: 100%;
         padding: 10px;
+        box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
+    }
+
+    body.dark .search-container.active #searchBar {
+        background: none;
+        border: none;
+        box-shadow:
+        0 2px 10px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
     }
 
     .search-container.active #micBtn {
         display: block;
+        box-shadow:
+        0 2px 10px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
+    }
+
+    body.dark .search-container.active #micBtn {
+        color: rgb(145, 145, 145);
     }
 
     .search-container.active #closeSearch {
         display: block;
+        color: rgb(145, 145, 145);
     }
 
     /* Hide search icon when expanded */
@@ -431,7 +542,7 @@ body.dark #searchBtn {
 
 @media (max-width: 767px) {
     .navRight .profile {
-        width: 30px;
+        width: 38px;
         border: 1px solid var(--nav-border-color);
     }
 
@@ -900,7 +1011,7 @@ body.sidebar-collapsed .top-navBottom {
 /* ================= VERTICAL LEFT NAVBAR ================= */
 
 .vertical-left-navBar {
-    top: 94px;
+    top: 104px;
     position: fixed;
     left: 0;
     z-index: 9;
@@ -960,7 +1071,7 @@ body.sidebar-collapsed .top-navBottom {
     text-decoration: none;
     color: inherit;
 
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 10px;
 
     transition: 
@@ -988,11 +1099,13 @@ body.sidebar-collapsed .top-navBottom {
 
 .vertical-left-navBar a:hover {
     width: 85%;
-    background: rgba(0,0,0,0.05);
+    /* background: rgba(0,0,0,0.05); */
+    background: rgba(255, 130, 130, 0.5);
 }
 
 body.dark .vertical-left-navBar a:hover {
-    background: rgba(255,255,255,0.1);
+    /* background: rgba(255,255,255,0.1); */
+    background: rgba(255, 130, 130, 0.8);
 }
 
 /* ================= COLLAPSED SIDEBAR ================= */
@@ -1026,7 +1139,7 @@ body.dark .vertical-left-navBar a:hover {
 
 .vertical-left-navBar.collapsed a:hover {
     width: 75%;
-    background: rgba(0,0,0,0.08);
+    /* background: rgba(0,0,0,0.08); */
     border-radius: 12px;
 }
 
@@ -1170,10 +1283,15 @@ body.dark .vertical-left-navBar a:hover {
 
         transform: translateY(-5px); /* change vertical position */
 
-        box-shadow:
+        /* box-shadow:
         0 8px 25px rgba(0,0,0,0.5),
         inset 0 2px 4px rgba(255,255,255,0.35),
-        inset 0 -2px 4px rgba(0,0,0,0.25);
+        inset 0 -2px 4px rgba(0,0,0,0.25); */
+
+        box-shadow:
+        0 4px 25px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130, 0.5),
+        inset 0 -2px 4px rgb(255, 130, 130, 0.5);
 
         color: var(--black-color);
 
