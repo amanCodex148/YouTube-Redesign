@@ -568,23 +568,313 @@ body.sidebar-collapsed .top-navBottom {
     margin-bottom: 18px;
 }
 
+/* ================= BOTTOM NAVBAR CATEGORY CONTAINER ================= */
+
+#all-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#all-container:hover {
+    width: 60px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#gaming-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#gaming-container:hover {
+    width: 90px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#movies-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 72px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#movies-container:hover {
+    width: 82px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#music-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#music-container:hover {
+    width: 75px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 95px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#education-container:hover {
+    width: 105px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#comedy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 82px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#comedy-container:hover {
+    width: 92px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#news-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#news-container:hover {
+    width: 70px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#sports-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 72px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#sports-container:hover {
+    width: 82px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#esport-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 88px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#esport-container:hover {
+    width: 98px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#android-tips-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 115px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#android-tips-container:hover {
+    width: 125px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#ios-tips-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#ios-tips-container:hover {
+    width: 90px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#tech-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 110px;
+    height: 30px;
+    border-radius: 15px;
+
+    background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130);
+
+    transition: 0.2s;
+}
+
+#tech-container:hover {
+    width: 120px;
+    height: 34px;
+    background: rgba(255, 112, 112, 0.64);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
 /* ================= BOTTOM NAVBAR LINKS ================= */
 
 .bottom-category a {
     white-space: nowrap;
-    gap: 5px;
+    /* gap: 5px; */
     text-decoration: none;
     color: inherit;
     font-size: 15px;
-    transition: 0.3s;
+    /* transition: 0.3s; */
     
 }
 
-.bottom-category a:hover {
-    /* opacity: 0.7; */
+/* .bottom-category a:hover {
+    opacity: 0.7;
     font-size: 20px;
     font-weight: 600;
-}
+} */
 
 /* .bottom-category a.active {
     font-size: 18px;
