@@ -122,9 +122,13 @@ body.dark {
         align-items: center;         
         justify-content: space-between;
         height: 60px;
-        background: black;
         border-bottom: 1px solid var(--nav-border-color);
     }
+
+    body.dark .top-navBar {
+        background: black;
+    }
+
 }
 
 /* ================= TOP LEFT SIDE NAVBAR SECTION ================= */
@@ -1283,15 +1287,15 @@ body.dark .vertical-left-navBar a:hover {
 
         transform: translateY(-5px); /* change vertical position */
 
-        /* box-shadow:
+        box-shadow:
         0 8px 25px rgba(0,0,0,0.5),
         inset 0 2px 4px rgba(255,255,255,0.35),
-        inset 0 -2px 4px rgba(0,0,0,0.25); */
+        inset 0 -2px 4px rgba(0,0,0,0.25);
 
-        box-shadow:
+        /* box-shadow:
         0 4px 25px rgb(255, 130, 130),
         inset 0 2px 4px rgb(255, 130, 130, 0.5),
-        inset 0 -2px 4px rgb(255, 130, 130, 0.5);
+        inset 0 -2px 4px rgb(255, 130, 130, 0.5); */
 
         color: var(--black-color);
 
