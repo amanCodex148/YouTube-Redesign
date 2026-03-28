@@ -189,6 +189,7 @@ body.dark {
     transition: 
         transform 0.2s ease,
         opacity 0.2s ease;
+
     transform: scale(1.05);
 
     /* box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); */
@@ -570,6 +571,8 @@ body.dark .navCenter #micBtn {
     border-radius: 50%;
     transition: 0.3s;
     border: 2px solid var(--nav-border-color);
+
+    
 }
 
 /* body.dark .navRight .profile {
@@ -721,6 +724,8 @@ body.sidebar-collapsed .top-navBottom {
 
 /* ================= BOTTOM NAVBAR CATEGORY CONTAINER ================= */
 
+/* ================= ALL CATEGORY CONTAINER ================= */
+
 #all-container {
     display: flex;
     justify-content: center;
@@ -749,6 +754,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= GAMING CATEGORY CONTAINER ================= */
 
 #gaming-container {
     display: flex;
@@ -779,6 +786,8 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
+/* ================= MOVIES CATEGORY CONTAINER ================= */
+
 #movies-container {
     display: flex;
     justify-content: center;
@@ -807,6 +816,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= MUSIC CATEGORY CONTAINER ================= */
 
 #music-container {
     display: flex;
@@ -837,6 +848,8 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
+/* ================= EDUCATION CATEGORY CONTAINER ================= */
+
 #education-container {
     display: flex;
     justify-content: center;
@@ -865,6 +878,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= COMEDY CATEGORY CONTAINER ================= */
 
 #comedy-container {
     display: flex;
@@ -895,6 +910,8 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
+/* ================= NEWS CATEGORY CONTAINER ================= */
+
 #news-container {
     display: flex;
     justify-content: center;
@@ -923,6 +940,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= SPORTS CATEGORY CONTAINER ================= */
 
 #sports-container {
     display: flex;
@@ -953,6 +972,8 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
+/* ================= ESPORTS CATEGORY CONTAINER ================= */
+
 #esport-container {
     display: flex;
     justify-content: center;
@@ -981,6 +1002,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= ANDROID TIPS CATEGORY CONTAINER ================= */
 
 #android-tips-container {
     display: flex;
@@ -1011,6 +1034,8 @@ body.sidebar-collapsed .top-navBottom {
     font-weight: 600;
 }
 
+/* ================= IOS TIPS CATEGORY CONTAINER ================= */
+
 #ios-tips-container {
     display: flex;
     justify-content: center;
@@ -1039,6 +1064,8 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ================= TECHNOLOGY CATEGORY CONTAINER ================= */
 
 #tech-container {
     display: flex;
@@ -1097,7 +1124,7 @@ body.sidebar-collapsed .top-navBottom {
 .top-navBottom {
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.25s ease;   /* 🔥 smooth hide */
+    transition: all 0.25s ease;   /* smooth hide */
 }
 
 .top-navBottom.collapsed {
