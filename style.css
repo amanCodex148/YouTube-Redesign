@@ -8,7 +8,7 @@
     --nav-border-color: #ddd;
     --sidebar-width: 160px;
     --sidebar-collapsed-width: 90px;
-    --navbar-height: 55px;
+    --navbar-height: 70px;
 }
 
 /* ================= DARK MODE ================= */
@@ -110,7 +110,7 @@ body.dark {
     overflow: visible;
     padding: 10px 20px;
     /* border-bottom: 1px solid var(--nav-border-color); */
-    height: 55px;
+    height: var(--navbar-height);
     
 }
 
@@ -715,7 +715,7 @@ body.sidebar-collapsed .top-navBottom {
 .bottom-category-container {
     display: flex;
     gap: 20px;
-    /* margin-top: 18px; */
+    margin-top: 10px;
     margin-bottom: 18px;
 }
 
@@ -1111,7 +1111,7 @@ body.sidebar-collapsed .top-navBottom {
 /* ================= VERTICAL LEFT NAVBAR ================= */
 
 .vertical-left-navBar {
-    top: 104px;
+    top: 55px;
     position: fixed;
     left: 0;
     z-index: 9;
@@ -1171,7 +1171,7 @@ body.sidebar-collapsed .top-navBottom {
     text-decoration: none;
     color: inherit;
 
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 10px;
 
     transition: 
