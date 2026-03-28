@@ -343,25 +343,30 @@ body.dark #searchBtn {
 /* ================= TOP CENTER MIC-BUTTON ================= */
 
 #micBtn {
-    background: rgb(255, 130, 130);
+    color: var(--black-color);
+    background: none;
     border: none;
     border-radius: 50%;
     font-size: 25px;
     cursor: pointer;
+    margin-left: 15px;
 
     width: 42px;
     height: 42px;
 
-    /* box-shadow:
-        0 8px 25px rgb(255, 130, 130),
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
         inset 0 2px 4px rgb(255, 130, 130),
-        inset 0 -2px 4px rgb(255, 130, 130); */
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.3s;
 }
 
 body.dark .navCenter #micBtn {
-    color: rgb(0, 0, 0);
+    color: var(--white-color);
 }
 
 /* ================= MIC HOVER EFFECT ================= */
@@ -680,6 +685,7 @@ body.sidebar-collapsed .top-navBottom {
 .bottom-category-container {
     display: flex;
     gap: 20px;
+    /* margin-top: 18px; */
     margin-bottom: 18px;
 }
 
@@ -694,8 +700,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -718,8 +729,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -742,8 +758,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -766,8 +787,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -790,8 +816,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -814,8 +845,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -838,8 +874,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -862,8 +903,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -886,8 +932,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -910,8 +961,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -934,8 +990,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
@@ -958,8 +1019,13 @@ body.sidebar-collapsed .top-navBottom {
     height: 30px;
     border-radius: 15px;
 
-    background: rgba(255, 112, 112, 0.3);
-    border: 2.5px solid rgb(255, 130, 130);
+    /* background: rgba(255, 112, 112, 0.3);
+    border: 2.5px solid rgb(255, 130, 130); */
+
+    box-shadow:
+        0 2px 5px rgb(255, 130, 130),
+        inset 0 2px 4px rgb(255, 130, 130),
+        inset 0 -2px 4px rgb(255, 130, 130);
 
     transition: 0.2s;
 }
