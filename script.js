@@ -1,3 +1,5 @@
+/* ================= PROFILE MENU ================= */
+
 const profileImg = document.getElementById("profile-img");
 const menu = document.getElementById("profile-menu");
 const themeToggle = document.getElementById("themeToggle");
@@ -15,7 +17,8 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// Dark mode toggle
+/* ================= DARK MODE ================= */
+
 themeToggle.addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -30,54 +33,51 @@ themeToggle.addEventListener("click", (e) => {
 
 console.log("JS LOADED");
 
-console.log(
-    document.getElementById("profile-img"),
-    document.getElementById("profile-menu"),
-    document.getElementById("themeToggle")
-);
+/* ================= SEARCH (FIXED CLEAN VERSION) ================= */
 
-// Search functionality for mobile
-
+/* 🔥 FIX: defined ONLY ONCE (removed duplicates) */
 const searchBox = document.getElementById("searchContainer");
 const searchBtn = document.getElementById("searchBtn");
 const closeSearch = document.getElementById("closeSearch");
+const categories = document.querySelector(".top-navBottom"); // CATEGORY BAR
 
-// Open search
+// Open search (mobile only)
 searchBtn.addEventListener("click", () => {
     if (window.innerWidth <= 767) {
         searchBox.classList.add("active");
+
+        /* hide categories */
+        categories.classList.add("collapsed");
     }
 });
 
 // Close search
 closeSearch.addEventListener("click", () => {
     searchBox.classList.remove("active");
+
+    /* show categories */
+    categories.classList.remove("collapsed");
 });
 
-// mic permissions for both desktop and mobile
+/* ================= MIC PERMISSION ================= */
 
 const micBtn = document.getElementById("micBtn");
 
 micBtn.addEventListener("click", async () => {
-
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true});
-        console.log("Microphone access granted"); // for checking in console, whether mic is workiing or not .
-        stream.getTracks().forEach(track => track.stop()); // Stop the stream immediately after access
-    }
-    catch (error) {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        console.log("Microphone access granted");
+        stream.getTracks().forEach(track => track.stop());
+    } catch (error) {
         console.error("Microphone access denied:", error);
-
         alert("Please allow microphone access!");
-
     }
 });
 
-// Sidebar menu and top bar category functionality for desktop
+/* ================= SIDEBAR (DESKTOP) ================= */
 
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.querySelector(".vertical-left-navBar");
-const categories = document.querySelector(".top-navBottom");
 
 menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");

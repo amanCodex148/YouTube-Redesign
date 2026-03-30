@@ -424,7 +424,7 @@ body.dark .navCenter #micBtn {
 }
 
 /* Hide close button by default */
-#closeSearch {
+.navCenter .search-container #closeSearch {
     display: none;
     background: none;
     border: none;
@@ -541,6 +541,7 @@ body.dark .navCenter #micBtn {
     .search-container.active ~ #searchBtn {
         display: none;
     }
+
 }
 
 /* ================= TOP RIGHT SIDE NAVBAR SECTION ================= */
@@ -697,7 +698,6 @@ body.sidebar-collapsed .top-navBar {
         width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
         opacity 0.2s ease;
 
-
 }
 
 body.sidebar-collapsed .top-navBottom {
@@ -709,7 +709,6 @@ body.sidebar-collapsed .top-navBottom {
 
  @media (max-width: 767px) {
     .top-navBottom {
-
         top: 62px;
         left: 0 !important;                 /* REMOVE SIDEBAR OFFSET */
         width: 100% !important;
@@ -719,6 +718,11 @@ body.sidebar-collapsed .top-navBottom {
         overflow: hidden;
 
         padding-left: 0;
+
+        transition: 
+        opacity 0.25s ease,
+        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 }
 
