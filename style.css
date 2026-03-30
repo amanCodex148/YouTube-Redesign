@@ -8,7 +8,7 @@
     --nav-border-color: #ddd;
     --sidebar-width: 160px;
     --sidebar-collapsed-width: 90px;
-    --navbar-height: 70px;
+    --navbar-height: 55px;
 }
 
 /* ================= DARK MODE ================= */
@@ -177,7 +177,7 @@ body.dark {
 /* ================= TOP LEFT SIDE LOGO & TEXT ================= */
 
 .navLeft img {
-    width: 30px;
+    width: 25px;
     margin-left: 5px;
     margin-right: 5px;
 
@@ -200,7 +200,7 @@ body.dark {
 .navLeft h2 {
 
     color: inherit;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -268,8 +268,8 @@ body.dark {
 
 #searchBar {
     background: none;
-    width: 450px;
-    height: 36px;
+    width: 400px;
+    height: 34px;
     padding: 8px;
     border-radius: 15px;
     border: none;
@@ -378,12 +378,12 @@ body.dark #searchBtn {
     background: none;
     border: none;
     border-radius: 50%;
-    font-size: 25px;
+    font-size: 18px;
     cursor: pointer;
     margin-left: 15px;
 
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
 
     /* background: rgba(255, 112, 112, 0.3);
     border: 2.5px solid rgb(255, 130, 130); */
@@ -566,7 +566,7 @@ body.dark .navCenter #micBtn {
 /* ================= TOP RIGHT SIDE PROFILE-IMAGE ================= */
 
 .navRight .profile {
-    width: 40px;
+    width: 38px;
     cursor: pointer;
     border-radius: 50%;
     transition: 0.3s;
@@ -720,7 +720,7 @@ body.sidebar-collapsed .top-navBottom {
     justify-content: center;
     align-items: center;
 
-    gap: 20px;
+    gap: 14px;
     margin-top: 10px;
     margin-bottom: 18px;
 }
@@ -773,9 +773,9 @@ body.sidebar-collapsed .top-navBottom {
     justify-content: center;
     align-items: center;
 
-    width: 50px;
-    height: 30px;
-    border-radius: 16px;
+    width: 42px;
+    height: 28px;
+    border-radius: 18px;
 
     /* background: rgba(255, 112, 112, 0.3);
     border: 2.5px solid rgb(255, 130, 130); */
@@ -789,8 +789,8 @@ body.sidebar-collapsed .top-navBottom {
 }
 
 #all-container:hover {
-    width: 60px;
-    height: 34px;
+    width: 52px;
+    height: 32px;
     background: rgba(255, 112, 112, 0.64);
 
     font-size: 20px;
@@ -804,8 +804,8 @@ body.sidebar-collapsed .top-navBottom {
     justify-content: center;
     align-items: center;
 
-    width: 80px;
-    height: 30px;
+    width: 70px;
+    height: 28px;
     border-radius: 16px;
 
     /* background: rgba(255, 112, 112, 0.3);
@@ -820,8 +820,8 @@ body.sidebar-collapsed .top-navBottom {
 }
 
 #gaming-container:hover {
-    width: 90px;
-    height: 34px;
+    width: 80px;
+    height: 32px;
     background: rgba(255, 112, 112, 0.64);
 
     font-size: 20px;
@@ -835,8 +835,8 @@ body.sidebar-collapsed .top-navBottom {
     justify-content: center;
     align-items: center;
 
-    width: 72px;
-    height: 30px;
+    width: 62px;
+    height: 28px;
     border-radius: 16px;
 
     /* background: rgba(255, 112, 112, 0.3);
@@ -851,8 +851,8 @@ body.sidebar-collapsed .top-navBottom {
 }
 
 #movies-container:hover {
-    width: 82px;
-    height: 34px;
+    width: 72px;
+    height: 32px;
     background: rgba(255, 112, 112, 0.64);
 
     font-size: 20px;
@@ -866,8 +866,8 @@ body.sidebar-collapsed .top-navBottom {
     justify-content: center;
     align-items: center;
 
-    width: 65px;
-    height: 30px;
+    width: 58px;
+    height: 28px;
     border-radius: 16px;
 
     /* background: rgba(255, 112, 112, 0.3);
@@ -882,8 +882,8 @@ body.sidebar-collapsed .top-navBottom {
 }
 
 #music-container:hover {
-    width: 75px;
-    height: 34px;
+    width: 68px;
+    height: 32px;
     background: rgba(255, 112, 112, 0.64);
 
     font-size: 20px;
@@ -1145,7 +1145,7 @@ body.sidebar-collapsed .top-navBottom {
     /* gap: 5px; */
     text-decoration: none;
     color: inherit;
-    font-size: 15px;
+    font-size: 12px;
     /* transition: 0.3s; */
     
 }
