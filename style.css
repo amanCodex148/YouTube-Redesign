@@ -707,11 +707,20 @@ body.sidebar-collapsed .top-navBottom {
 
 /* ================= MOBILE RESPONSIVE ================= */
 
-/* @media (max-width: 767px) {
+ @media (max-width: 767px) {
     .top-navBottom {
-        font-size: 8px;
+
+        top: 62px;
+        left: 0 !important;                 /* REMOVE SIDEBAR OFFSET */
+        width: 100% !important;
+        height: 45px;
+
+        justify-content: flex-start;
+        overflow: hidden;
+
+        padding-left: 0;
     }
-} */
+}
 
 /* ================= BOTTOM NAVBAR CONTAINER ================= */
 
@@ -733,19 +742,23 @@ body.sidebar-collapsed .top-navBottom {
 
         display: flex;
 
-        overflow-x: auto;             /* ENABLE HORIZONTAL SCROLL */
+        overflow-x: auto;
         overflow-y: hidden;
 
         gap: 10px;
 
-        padding: 10px 12px;           
+        padding: 10px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        justify-content: flex-start;
 
         scroll-behavior: smooth;
-
-        -webkit-overflow-scrolling: touch; /* SMOOTH MOBILE SCROLL */
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* ================= HIDE SCROLLBAR ================= */
+   /* ================= HIDE SCROLLBAR ================= */
 
     .bottom-category-container::-webkit-scrollbar {
         display: none;
@@ -755,11 +768,11 @@ body.sidebar-collapsed .top-navBottom {
         scrollbar-width: none;
     }
 
-    /* ================= FIX ITEMS ================= */
+    /* ================= PREVENT ITEMS SHRINK ================= */
 
-    .bottom-category-container span {
+    .bottom-category-container > * {
         white-space: nowrap;
-        flex-shrink: 0;
+        flex-shrink: 0;   /* CRITICAL FIX */
     }
 
 }
@@ -1160,6 +1173,16 @@ body.sidebar-collapsed .top-navBottom {
     font-size: 18px;
     font-weight: 600;
 } */
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 767px) {
+    .bottom-category a {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+}
 
 /* ================= COLLAPSED CATEGORY BAR ================= */
 
