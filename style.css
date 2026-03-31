@@ -544,6 +544,114 @@ body.dark .navCenter #micBtn {
 
 }
 
+/* ================= SEARCH FILTER CONTAINER ================= */
+
+.searchBar-filters {
+    position: absolute;
+    top: 50px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 10px;
+
+    display: flex;
+
+    justify-content: space-around;
+    margin-left: 50px;
+
+    z-index: 9999;
+}
+
+/* ================= FILTER BOX ================= */
+
+.search-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+
+    padding: 8px 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    /* padding: 8px 12px; */
+
+    /* animation base */
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+
+    transition: 
+        opacity 0.2s ease,
+        transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ================= SHOW ================= */
+
+.searchBar-filters.active .search-filters {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* ================= FILTER ITEMS ================= */
+
+.filter-item {
+    padding: 6px 12px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+    .searchBar-filters {
+        top: 60px;
+        left: 10px;
+        width: calc(100% - 20px);
+        margin-left: 0;
+    }
+
+    .search-filters {
+        justify-content: flex-start;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+}
+
+/* ================= TOP CENTER MIC-BUTTON BACKGROUND ================= */
+
+/* .mic-bg-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+
+    background: rgb(255, 130, 130);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+} */
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* @media (max-width: 767px) {
+    .mic-bg-circle {
+        display: none;
+    }
+} */
+
 /* ================= TOP RIGHT SIDE NAVBAR SECTION ================= */
 
 .navRight {
@@ -1563,7 +1671,5 @@ body.dark .vertical-left-navBar a:hover {
 
         fill: currentcolor;
     }
-
-
 
 }
