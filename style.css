@@ -547,6 +547,7 @@ body.dark .navCenter #micBtn {
 /* ================= SEARCH FILTER CONTAINER ================= */
 
 .searchBar-filters {
+    pointer-events: none;
     position: absolute;
     top: 50px;
     left: 0;
