@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- disable zooming on mobile (pinch zoom + double tap) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Youtube Redesign - AmanCodex, Pratham</title>
+
+    <!-- <link rel="icon" type="image/png" href="/assets/images/YouTube-Logo1.png" /> -->
+
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/57c5d394/img/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="https://www.youtube.com/s/desktop/57c5d394/img/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/57c5d394/img/favicon_48x48.png" sizes="48x48">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/57c5d394/img/favicon_96x96.png" sizes="96x96">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/57c5d394/img/favicon_144x144.png" sizes="144x144">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+
+<body onload="window.scrollTo(0,0)">
+
+    <navigation class="top-navBar-section"> 
+
+        <div class="top-navBar">
+
+        <!-- at the top bar of the page, we have a navbar which is divided into three sections - left, center, right and bottom. -->
+
+        <!-- at the left, we have the logo of youtube -->
+
+            <div class="navLeft">
+
+                <button id="menuBtn"><i class="ri-menu-fill"></i></button>
+
+                <img src="/assets/images/YouTube-Logo1.png" alt="logo-img" id="logo-img">
+
+                <h2 id="logo-text">YouTube</h2>
+
+            </div>
+
+            <!-- at the center, we have the search bar and mic -->
+
+            <div class="navCenter">
+
+                <!-- <select class="category">
+
+                    <option value="all" class="category-option"> All </option>
+                    <option value="movie" class="category-option"> Movies </option>
+                    <option value="music" class="category-option"> Music </option>
+                    <option value="gaming" class="category-option"> Gaming </option>
+
+                </select> -->
+
+                <div class="search-container" id="searchContainer">
+
+                    <input type="text" id="searchBar" placeholder="Search...">
+
+                    <div class="searchBar-filters" id="search-filter">
+
+                        <div class="search-filters">
+
+                                <div class="filter-item"><span>Video</span></div>
+                                <div class="filter-item"><span>Shorts</span></div>
+                                <div class="filter-item"><span>Music</span></div>
+                                <div class="filter-item"><span>Post</span></div>
+                                <div class="filter-item"><span>Live</span></div>
+                                <div class="filter-item"><span>Channels</span></div>
+                                <div class="filter-item"><span>Playlist</span></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mic-bg-circle"><button id="micBtn"><i class="ri-mic-line"></i></button></div><!-- mic permission is given :) -->
+
+                    <button id="closeSearch"><i class="ri-close-line"></i></button>
+
+                </div>
+
+            </div>
+
+            <!-- at the right, we have the profile picture and the dropdown for profile options -->
+
+            <div class="navRight">
+
+                <!-- Mobile search icon -->
+                    
+                <button id="searchBtn"><i class="ri-search-line"></i></button>
+
+                <img src="/assets/images/Codex PFP.png" class="profile" id="profile-img">
+
+                <div class="profile-menu" id="profile-menu">
+
+                    <div class="menu-item">👤 My Profile</div>
+                    <div class="menu-item" id="settingsBtn">⚙️ Settings</div>
+                    <div class="menu-item">🚪 Sign Out</div>
+                    <div class="menu-item" id="themeToggle">🌙 Dark Mode</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </navigation>
+    
+    <!-- for only mobile type devices, we have a bottom navBar -->
+
+    <!-- BOTTOM NAVBAR -->
+
+    <footer class="bottom-navBar">
+
+        <ul class="navs">
+
+            <li class="nav">
+
+                <a href="index.html">
+
+                    <!-- home icon -->
+
+                    <yt-icon class="nav-icons">
+                        <span>
+                            <div class="nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path d="m11.485 2.143-8 4.8-2 1.2a1 1 0 001.03 1.714L3 9.567V20a2 2 0 002 2h5v-8h4v8h5a2 2 0 002-2V9.567l.485.29a1 1 0 001.03-1.714l-2-1.2-8-4.8a1 1 0 00-1.03 0Z"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </yt-icon>Home
+                </a>
+
+            </li>
+
+            <li class="nav">
+
+                <a href="#shorts">
+                 
+                <!-- shorts icon -->
+
+                    <yt-icon class="nav-icons">
+                        <span>
+                            <div id="shorts-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </yt-icon>Shorts
+                </a>
+                
+            </li>
+
+            <li class="nav">
+
+                <a href="#create" id="creationBtn">
+
+                    <!-- create icon -->
+
+                    <i class="ri-add-large-fill"></i>
+                    
+                </a>
+
+            </li>
+
+            <li class="nav">
+
+                <a href="#music">
+
+                    <!-- music icon -->
+
+                    <yt-icon class="nav-icons">
+                        <span>
+                            <div class="nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm0 2.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13ZM12 7a5 5 0 110 10 5 5 0 010-10Zm3 5-5-3v6l5-3Z"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </yt-icon>Music
+                </a>
+
+            </li>
+
+            <li class="nav">
+
+                <a href="#posts">
+
+                <!-- posts icon -->
+
+                    <yt-icon>
+                        <span>
+                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;">
+                                <svg id="post-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"></path><path d="M7 7h10v2H7zm0 4h10v2H7z"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </yt-icon> Posts
+                </a>
+
+            </li>
+
+        </ul>
+
+    </footer>
+
+    <!-- JS (use defer to ensure DOM is loaded) -->
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>

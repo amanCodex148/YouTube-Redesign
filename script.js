@@ -3,6 +3,7 @@
 /* get elements */
 const profileImg = document.getElementById("profile-img");
 const menu = document.getElementById("profile-menu");
+const settingsBtn = document.getElementById("settingsBtn");
 const themeToggle = document.getElementById("themeToggle");
 
 /* toggle profile menu on click */
@@ -18,6 +19,11 @@ document.addEventListener("click", (e) => {
     }
 });
 
+/* ================= SETTINGS PAGE ================= */
+
+settingsBtn.addEventListener("click", function() {
+    window.location.href = "settings.html";
+});
 
 /* ================= DARK MODE ================= */
 
