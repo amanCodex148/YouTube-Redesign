@@ -118,37 +118,3 @@
 body.dark .vertical-settings-navBar a:hover {
     background: rgba(255, 45, 45, 0.700);
 }
-
-/* ================= COLLAPSED SIDEBAR ================= */
-
-/* .vertical-settings-navBar.collapsed {
-    width: var(--sidebar-collapsed-width);
-    top: var(--navbar-height);
-}
-
-.vertical-settings-navBar.collapsed li {
-    margin-bottom: 6px;
-    
-}
-
-.vertical-settings-navBar.collapsed a {
-    justify-content: center;
-    font-size: 11px;
-}
-
-.vertical-settings-navBar.collapsed .vert-nav-icons {
-    width: 26px;
-    height: 26px;
-    fill: currentcolor;
-    margin: 0;
-}
-
-.vertical-settings-navBar.collapsed .vert-nav-icons #post-icon {
-    width: 26px;
-    height: 26px;
-}
-
-.vertical-settings-navBar.collapsed a:hover {
-    width: 75%;
-    border-radius: 12px;
-} */
