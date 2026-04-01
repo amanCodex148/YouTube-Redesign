@@ -1,0 +1,133 @@
+.top-navBar {
+    height: 60px;
+    border-bottom: 1px solid var(--nav-border-color);
+
+}
+
+/* ================= VERTICAL LEFT NAVBAR (SETTINGS) ================= */
+
+.vertical-settings-navBar {
+    top: 60px;
+    position: fixed;
+    left: 0;
+    z-index: 9;
+    width: var(--sidebar-width);
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    border-right: 1px solid var(--nav-border-color);
+
+    transition: 
+        width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+        transform 0.25s ease;  
+
+}
+
+/* ================= VERTICAL LEFT NAVBAR DISABLED IN PHONES ================= */
+
+@media (max-width: 767px) {
+    .vertical-settings-navBar {
+        display: none;
+    }
+}
+
+/* ================= VERTICAL LEFT NAVBAR LINKS ================= */
+
+.vertical-settings-navBar ul {
+    list-style: none;              /* remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+
+}
+
+.vertical-settings-navBar li {
+    width: 100%;
+    margin-bottom: 8px;
+    
+}
+
+.vertical-settings-navBar a {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    color: inherit;
+
+    font-size: 15px;
+    border-radius: 10px;
+
+    transition: 
+        transform 0.2s ease,
+        background 0.2s ease,
+        width 0.25s ease;
+
+    gap: 4px;
+
+}
+
+.vertical-settings-navBar a:hover {
+    transform: scale(1.05);
+}
+
+/* ================= SIDEBAR NAV ICONS ================= */
+
+.vertical-settings-navBar .vert-nav-icons {
+    width: 21px;
+    height: 21px;
+    fill: currentcolor;
+    margin: 0;
+}
+
+.vertical-settings-navBar a:hover {
+    width: 85%;
+    background: rgba(255, 45, 45, 0.700);
+}
+
+body.dark .vertical-settings-navBar a:hover {
+    background: rgba(255, 45, 45, 0.700);
+}
+
+/* ================= COLLAPSED SIDEBAR ================= */
+
+/* .vertical-settings-navBar.collapsed {
+    width: var(--sidebar-collapsed-width);
+    top: var(--navbar-height);
+}
+
+.vertical-settings-navBar.collapsed li {
+    margin-bottom: 6px;
+    
+}
+
+.vertical-settings-navBar.collapsed a {
+    justify-content: center;
+    font-size: 11px;
+}
+
+.vertical-settings-navBar.collapsed .vert-nav-icons {
+    width: 26px;
+    height: 26px;
+    fill: currentcolor;
+    margin: 0;
+}
+
+.vertical-settings-navBar.collapsed .vert-nav-icons #post-icon {
+    width: 26px;
+    height: 26px;
+}
+
+.vertical-settings-navBar.collapsed a:hover {
+    width: 75%;
+    border-radius: 12px;
+} */
